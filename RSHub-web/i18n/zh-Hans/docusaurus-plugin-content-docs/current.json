@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Vegetation Scenarios": {
+    "message": "植被场景",
+    "description": "The label for category Vegetation Scenarios in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Vegetation Scenarios.link.generated-index.description": {
+    "message": "    ",
+    "description": "The generated-index page description for category Vegetation Scenarios in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Snow Scenarios": {
+    "message": "积雪场景",
+    "description": "The label for category Snow Scenarios in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Snow Scenarios.link.generated-index.description": {
+    "message": "    ",
+    "description": "The generated-index page description for category Snow Scenarios in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Soil Scenarios": {
+    "message": "土壤场景",
+    "description": "The label for category Soil Scenarios in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Soil Scenarios.link.generated-index.description": {
+    "message": "    ",
+    "description": "The generated-index page description for category Soil Scenarios in sidebar tutorialSidebar"
+  }
+}

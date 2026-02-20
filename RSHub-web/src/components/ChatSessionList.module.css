@@ -1,0 +1,461 @@
+/* 主容器 */
+.chatSessionList {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  border: 1px solid #e9ecef;
+  margin: 0;
+}
+
+/* 头部 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #B08EAD 0%, #85A0BF 100%);
+  color: white;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.refreshButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.refreshButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.refreshButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 会话容器 */
+.sessionContainer {
+  padding: 20px;
+  min-height: 200px;
+}
+
+/* 加载状态 */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #B08EAD;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingState p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* 错误状态 */
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #dc3545;
+}
+
+.errorState p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.errorState button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.errorState button:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* 空状态 */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.emptyState p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.emptyState p:first-child {
+  font-weight: 500;
+  color: #495057;
+}
+
+.emptyState p:last-child {
+  opacity: 0.8;
+}
+
+/* 会话表格 */
+.sessionTable {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+  background: white;
+}
+
+/* 表头 */
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 600;
+  color: #495057;
+}
+
+.headerCell {
+  padding: 12px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #e9ecef;
+}
+
+.headerCell:last-child {
+  border-right: none;
+  justify-content: center;
+}
+
+/* 表体 */
+.tableBody {
+  background: white;
+}
+
+/* 会话行 */
+.sessionRow {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr 80px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.sessionRow:hover {
+  background: #f8f9fa;
+}
+
+.sessionRow:last-child {
+  border-bottom: none;
+}
+
+/* 表格单元格 */
+.tableCell {
+  padding: 12px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #f1f3f4;
+  min-height: 48px;
+}
+
+.tableCell:last-child {
+  border-right: none;
+  justify-content: center;
+}
+
+/* 会话名称 */
+.sessionName {
+  font-weight: 600;
+  color: #495057;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 会话描述 */
+.sessionDescription {
+  color: #6c757d;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 会话类型 */
+.sessionType {
+  color: #6c757d;
+  font-size: 13px;
+  background: rgba(176, 142, 173, 0.1);
+  border: 1px solid rgba(176, 142, 173, 0.3);
+  border-radius: 12px;
+  padding: 4px 8px;
+  color: #B08EAD;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* 会话时间 */
+.sessionTime {
+  color: #6c757d;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* 删除按钮 */
+.deleteButton {
+  background: rgba(220, 53, 69, 0.1);
+  border: none;
+  color: #dc3545;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.deleteButton:hover {
+  background: #dc3545;
+  color: white;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .tableHeader {
+    grid-template-columns: 2fr 2fr 1fr 60px;
+  }
+  
+  .sessionRow {
+    grid-template-columns: 2fr 2fr 1fr 60px;
+  }
+  
+  .headerCell:nth-child(2) {
+    display: none;
+  }
+  
+  .tableCell:nth-child(2) {
+    display: none;
+  }
+  
+  .sessionContainer {
+    padding: 16px;
+  }
+  
+  .header {
+    padding: 16px;
+  }
+  
+  .header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .refreshButton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatSessionList {
+    margin: 0;
+  }
+  
+  .tableHeader {
+    grid-template-columns: 3fr 1fr 50px;
+  }
+  
+  .sessionRow {
+    grid-template-columns: 3fr 1fr 50px;
+  }
+  
+  .headerCell:nth-child(2),
+  .headerCell:nth-child(3) {
+    display: none;
+  }
+  
+  .tableCell:nth-child(2),
+  .tableCell:nth-child(3) {
+    display: none;
+  }
+  
+  .sessionContainer {
+    padding: 12px;
+    min-height: 120px;
+  }
+  
+  .header {
+    padding: 12px;
+  }
+  
+  .sessionName {
+    font-size: 13px;
+  }
+  
+  .sessionTime {
+    font-size: 11px;
+  }
+  
+  .deleteButton {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
+
+/* 深色主题 */
+[data-theme='dark'] .chatSessionList {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .header {
+  background: linear-gradient(135deg, #B08EAD 0%, #85A0BF 100%);
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] .sessionContainer {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .sessionTable {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] .tableHeader {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .headerCell {
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] .tableBody {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .sessionRow {
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] .sessionRow:hover {
+  background: #4a5568;
+}
+
+[data-theme='dark'] .tableCell {
+  border-color: #4a5568;
+}
+
+[data-theme='dark'] .sessionName {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .sessionDescription {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .sessionType {
+  background: rgba(176, 142, 173, 0.2);
+  border-color: rgba(176, 142, 173, 0.5);
+  color: #B08EAD;
+}
+
+[data-theme='dark'] .sessionTime {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .loadingState,
+[data-theme='dark'] .emptyState {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .emptyState p:first-child {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .deleteButton {
+  background: rgba(220, 53, 69, 0.2);
+  color: #fc8181;
+}
+
+[data-theme='dark'] .deleteButton:hover {
+  background: #dc3545;
+  color: white;
+}
+
+[data-theme='dark'] .errorState {
+  color: #fc8181;
+}
+
+[data-theme='dark'] .errorState button {
+  background: #dc3545;
+}
+
+[data-theme='dark'] .errorState button:hover {
+  background: #c82333;
+}
+
+[data-theme='dark'] .spinner {
+  border-color: #4a5568;
+  border-top-color: #B08EAD;
+} 

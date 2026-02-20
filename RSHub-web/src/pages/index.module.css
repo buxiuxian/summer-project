@@ -1,0 +1,105 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.heroTitle {
+  font-family: Arial, sans-serif;
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  color: white;
+  opacity: 1;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+  font-family: Arial, sans-serif;
+  font-size: clamp(1rem, 3.2vw, 1.5rem);
+  color: white;
+  opacity: 1;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+    min-height: 40vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroBanner {
+    padding: 1rem;
+    min-height: 30vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroBanner {
+    padding: 0.5rem;
+    min-height: 25vh;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* 确保文字在缩放时不会被遮挡 */
+.heroBanner h1 {
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroBanner p {
+  font-size: clamp(1rem, 3.2vw, 1.5rem);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 针对不同缩放级别的优化 */
+@media (max-width: 1200px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroBanner {
+    padding: 2rem 1rem;
+  }
+}
+
+/* 确保在缩放时内容不会被遮挡 */
+.heroBanner > div {
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}

@@ -1,0 +1,54 @@
+{
+  "title": {
+    "message": "平台总览",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "本站标志",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Getting Started": {
+    "message": "快速开始",
+    "description": "Navbar item with label Getting Started"
+  },
+  "item.label.Scenarios": {
+    "message": "应用场景",
+    "description": "Navbar item with label Scenarios"
+  },
+  "item.label.Agent": {
+    "message": "智能助手",
+    "description": "Navbar item with label Agent"
+  },
+  "item.label.Acknowledgements": {
+    "message": "致谢",
+    "description": "Navbar item with label Acknowledgements"
+  },
+  "version.label": {
+    "message": "最新",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Vegetation Scenario": {
+    "message": "植被场景",
+    "description": "The label for category Vegetation Scenario in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Vegetation Scenario.link.generated-index.description": {
+    "message": "植被相关的遥感应用场景",
+    "description": "The generated-index page description for category Vegetation Scenario in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Snow Scenario": {
+    "message": "积雪场景",
+    "description": "The label for category Snow Scenario in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Snow Scenario.link.generated-index.description": {
+    "message": "积雪相关的遥感应用场景",
+    "description": "The generated-index page description for category Snow Scenario in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Soil Scenario": {
+    "message": "土壤场景",
+    "description": "The label for category Soil Scenario in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Soil Scenario.link.generated-index.description": {
+    "message": "土壤相关的遥感应用场景",
+    "description": "The generated-index page description for category Soil Scenario in sidebar tutorialSidebar"
+  }
+}

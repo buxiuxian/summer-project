@@ -1,0 +1,87 @@
+# RS Agent MCP Environment Variables Configuration Template
+# Copy this file as .env and fill in the actual configuration values
+
+# RSHub Configuration
+RSHUB_TOKEN=your-rshub-token
+
+# Deployment Mode Configuration
+# Options: "production" or "local"
+# - production: Use token from frontend request (for deployment)
+# - local: Use token from config file (for local testing)
+DEPLOYMENT_MODE=local
+
+# Session Storage Configuration
+# Enable local session cache (recommended: false for production, true for local)
+# - true: Enable local cache as acceleration layer (production) or primary storage (local)
+# - false: Use RSHub API as primary storage only (recommended for production deployment)
+ENABLE_LOCAL_SESSION_CACHE=true
+
+# Billing Configuration
+# Cost factors for billing calculation
+LLM_COST_FACTOR=1.0
+RSHUB_TASK_COST_FACTOR=1.
+
+# LLM Configuration (OpenAI Compatible API)
+BASE_URL=your-url
+API_KEY=your-key
+MODEL=your-model
+
+# Common LLM Provider Examples:
+# 1. DeepSeek (via Volcano Engine):
+#    BASE_URL=https://ark.cn-beijing.volces.com/api/v3
+#    API_KEY=your-ark-api-key
+#    MODEL=deepseek-r1-250528
+#
+# 2. OpenAI:
+#    BASE_URL=https://api.openai.com/v1
+#    API_KEY=sk-your-openai-api-key
+#    MODEL=gpt-3.5-turbo
+#
+# 3. Ollama (local):
+#    BASE_URL=http://localhost:11434/v1
+#    API_KEY=ollama  # Ollama doesn't require API key, but field is required
+#    MODEL=llama3.2:1b
+#
+# 4. Other providers (e.g., Azure OpenAI, Claude via proxy, etc.):
+#    Just fill in the corresponding BASE_URL, API_KEY, and MODEL
+
+# --------------Generally no need to modify following environment variables---------------
+
+# Optional LLM Parameters
+LLM_TEMPERATURE=0.7
+LLM_TIMEOUT=120
+LLM_MAX_TOKENS=20000
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=8000
+DEBUG=true
+RELOAD=true
+
+# Application Information
+APP_NAME=RS Agent MCP
+APP_VERSION=0.1.0
+APP_DESCRIPTION=Microwave Remote Sensing Intelligent Analysis Agent Service
+
+# File Storage Configuration (unit: bytes)
+MAX_FILE_SIZE=20971520
+SESSION_CLEANUP_HOURS=24
+
+# Knowledge Base Configuration
+KNOWLEDGE_BASE_PATH=file_storage
+VECTOR_DB_PATH=faiss_index_domain_science
+EMBEDDING_MODEL=text-embedding-ada-002
+MAX_RETRIEVAL_DOCS=3
+
+# RAG Configuration
+CHUNK_SIZE=1000
+CHUNK_OVERLAP=200
+SIMILARITY_THRESHOLD=0.7
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FORMAT=%(asctime)s - %(name)s - %(levelname)s - %(message)s
+
+# Agent Configuration
+MAX_RETRIES=3
+REQUEST_TIMEOUT=30

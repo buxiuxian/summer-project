@@ -1,0 +1,161 @@
+# ============================================
+# Python 标准忽略规则
+# ============================================
+
+# 编译文件和缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# 虚拟环境
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 包管理
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 测试和覆盖率
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# 环境配置
+.env
+
+# 开发工具
+.spyderproject
+.spyproject
+.ropeproject
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ============================================
+# 包管理器锁文件（可选取消注释）
+# ============================================
+
+# Pipfile.lock
+# uv.lock
+# poetry.lock
+# pdm.lock
+
+# ============================================
+# 开发工具配置
+# ============================================
+
+# IDE 配置
+.vscode/
+.idea/
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+
+# Cursor AI 编辑器
+.cursorignore
+.cursorindexingignore
+
+# ============================================
+# 操作系统生成的文件
+# ============================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+
+# ============================================
+# RS Agent MCP 项目特定忽略规则
+# ============================================
+
+# 环境配置文件
+.env.local
+.env.production
+.env.development
+
+# 运行时文件
+logs/
+temp/
+tmp/
+sessions/
+session_data/
+session_cache/
+
+# 数据存储文件
+file_storage/
+uploads/
+*.upload
+
+# 模型和索引文件
+*.index
+*.bin
+*.model
+*.pkl
+*.pickle
+faiss_index_*
+
+# 备份文件
+*.bak
+*.backup
+
+# 开发调试文件
+debug.md
+debug_*.md
+progress.md
+progress_*.md
+
+# 项目记录文件（可选提交）
+项目记录/
+构建完成记录.md
+进度.md
+
+# AI 相关配置
+.claude/
+*.claude
+
+# 其他开发文件
+*.test
+*.dev
+.local

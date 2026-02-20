@@ -1,0 +1,7 @@
+======20250627233606/27/25======
+ project_name = Snow Demo 
+ task_name = DMRT-BIC Active 
+ data = {'scenario_flag': 'snow', 'output_var': 'bs', 'fGHz': [10.2, 16.7], 'angle': [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65], 'algorithm': 'bic', 'depth': [6, 2, 8], 'rho': [0.108, 0.108, 0.208], 'kc': [7000, 7500, 5500], 'zp': [1.2, 1.2, 1.6], 'Tsnow': [260, 262, 265], 'Tg': 270, 'mv': 0.2, 'clayfrac': 0.3, 'surf_model_setting': [3, 0.25, 7], 'project_name': 'Snow Demo', 'task_name': 'DMRT-BIC Active', 'token': 'vdeu@l#z!tw?qxcalc6$!uo!w9rlhv', 'level_required': 1} 
+ task_name = DMRT-BIC Passive 
+ data = {'scenario_flag': 'snow', 'output_var': 'tb', 'fGHz': [10.2, 16.7], 'angle': [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65], 'algorithm': 'bic', 'depth': [6, 2, 8], 'rho': [0.108, 0.108, 0.208], 'kc': [7000, 7500, 5500], 'zp': [1.2, 1.2, 1.6], 'Tsnow': [260, 262, 265], 'Tg': 270, 'mv': 0.2, 'clayfrac': 0.3, 'surf_model_setting': [1, 0.5, 0.5], 'project_name': 'Snow Demo', 'task_name': 'DMRT-BIC Passive', 'token': 'vdeu@l#z!tw?qxcalc6$!uo!w9rlhv', 'level_required': 1} 
+================================ 
